@@ -1,0 +1,43 @@
+/* CSS HEX
+--licorice: #220c10ff;
+--onyx: #393c3a;
+--feldgrau: #506c64ff;
+--tiffany-blue: #77cbb9ff;
+--moonstone: #75b8c8ff;
+--silver: #cdd3d5ff;
+
+ CSS HSL 
+--licorice: hsla(349, 48%, 9%, 1);
+--feldgrau: hsla(163, 15%, 37%, 1);
+--tiffany-blue: hsla(167, 45%, 63%, 1);
+--moonstone: hsla(192, 43%, 62%, 1);
+--silver: hsla(195, 9%, 82%, 1);
+ */
+
+.lucide {
+}
+
+.card__icon {
+  color: #506c64;
+  width: 56px;
+  height: 56px;
+  stroke-width: 1px;
+  fill: #506c64;
+  background: transparent;
+  filter: drop-shadow(8px 5px #77cbb9);
+}
+
+.brand__icon {
+  color: #77cbb9;
+  width: 56px;
+  height: 56px;
+  fill: #506c64;
+}
+
+.hero__icon {
+  color: #77cbb9;
+  width: 56px;
+  height: 56px;
+  stroke-width: 2px;
+  fill: none;
+}
