@@ -20,12 +20,13 @@
   padding: 0;
   text-decoration: 0;
   box-sizing: border-box;
-  transition: all ease 0.2s;
+  transition: all ease 0.3s;
   list-style-type: none;
 }
+
 body {
   font-family: "Instrument Sans", sans-serif;
-  background-color: #cdd3d5;
+  background-color: #e4e8e9;
 }
 
 a {
@@ -33,22 +34,95 @@ a {
 }
 
 /* Navigation */
-nav {
+.navbar {
+  position: absolute;
+  width: 100%;
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 
 .navbar__links a {
   padding: 1rem;
+  color: black;
+}
+.navbar__links a:hover {
+  color: #75b8c8;
 }
 
-/* About Section */
+.navbar__links--account a {
+  padding: 0.5rem 1rem;
+}
+
+.navbar__links--account a:hover {
+}
+
+/* Will show up once the bg is there */
+.navbar__login {
+  color: #cdd3d5;
+  margin-right: 1rem;
+}
+
+.navbar__login:hover {
+  background-color: #e4e8e9;
+  color: #334a44;
+}
+
+.navbar__signup {
+  background-color: #e4e8e9;
+  color: #334a44;
+}
+.navbar__signup:hover {
+  background-color: #334a44;
+  color: #e4e8e9;
+}
+
+/* Hero */
+.hero {
+  width: 100%;
+}
+
+.hero__container {
+  width: 100%;
+  display: flex;
+}
+
+.hero__content {
+  background-color: #506c64;
+  padding: 4rem 6rem 6rem;
+}
+.hero__text {
+  max-width: 300px;
+  margin: auto;
+}
+
+.hero__title {
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+}
+.hero__title span {
+  color: #506c64;
+  text-shadow: -2px -2px 0 #77cbb9, 2px -2px 0 #77cbb9, -2px 2px 0 #77cbb9, 2px 2px 0 #77cbb9;
+}
+
+.hero__image {
+  background-color: #cdd3d5;
+  height: 100%;
+  width: 60%;
+}
+.hero__text p {
+  font-size: 1.25rem;
+  color: #cdd3d5;
+  padding: 2rem 0;
+}
+
+/* About */
 .grid {
   display: grid;
-  gap: 24px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 3fr 1fr 3fr;
   margin: 2rem auto;
   width: 80%;
   max-width: 1000px;
@@ -66,7 +140,7 @@ nav {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem
+  padding: 2rem;
 }
 
 .card h3 {
@@ -88,7 +162,6 @@ nav {
 
 /* Icons */
 .lucide {
-  
 }
 
 .card__icon {
@@ -110,12 +183,23 @@ nav {
 
 .hero__icon {
   color: #77cbb9;
-  width: 56px;
-  height: 56px;
-  stroke-width: 2px;
+  width: 60px;
+  height: 60px;
+  stroke-width: 4px;
   fill: none;
 }
 
 .hero__icon:hover {
   scale: 1.2;
+}
+
+/* Sign Up */
+.signup {
+  background-color: #506c64;
+}
+
+/* Footer */
+
+footer {
+  background-color: #506c64;
 }
