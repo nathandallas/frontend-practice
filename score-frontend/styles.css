@@ -1,18 +1,12 @@
-/* CSS HEX
---licorice: #220c10ff;
---onyx: #393c3a;
---feldgrau: #506c64ff;
---tiffany-blue: #77cbb9ff;
---moonstone: #75b8c8ff;
---silver: #cdd3d5ff;
-
- CSS HSL 
---licorice: hsla(349, 48%, 9%, 1);
---feldgrau: hsla(163, 15%, 37%, 1);
---tiffany-blue: hsla(167, 45%, 63%, 1);
---moonstone: hsla(192, 43%, 62%, 1);
---silver: hsla(195, 9%, 82%, 1);
- */
+:root {
+  --licorice: #220c10;
+  --onyx: #393c3a;
+  --forest: #506c64;
+  --tiffany: #77cbb9;
+  --moonstone: #75b8c8;
+  --silver: #cdd3d5;
+  --egg: #e4e8e9;
+}
 
 /* Global Styles*/
 * {
@@ -26,7 +20,7 @@
 
 body {
   font-family: "Instrument Sans", sans-serif;
-  background-color: #e4e8e9;
+  background-color: var(--egg);
 }
 
 a {
@@ -49,11 +43,12 @@ a {
   color: black;
 }
 .navbar__links a:hover {
-  color: #75b8c8;
+  color: var(--moonstone);
 }
 
 .navbar__links--account a {
   padding: 0.5rem 1rem;
+  font-size: 1.25rem;
 }
 
 .navbar__links--account a:hover {
@@ -61,67 +56,79 @@ a {
 
 /* Will show up once the bg is there */
 .navbar__login {
-  color: #cdd3d5;
+  color: var(--forest);
   margin-right: 1rem;
 }
 
 .navbar__login:hover {
-  background-color: #e4e8e9;
-  color: #334a44;
+  background-color: var(--egg);
+  color: var(--onyx);
 }
 
 .navbar__signup {
-  background-color: #e4e8e9;
-  color: #334a44;
+  background-color: var(--egg);
+  color: var(--onyx);
 }
 .navbar__signup:hover {
-  background-color: #334a44;
-  color: #e4e8e9;
+  background-color: var(--onyx);
+  color: var(--egg);
 }
 
 /* Hero */
 .hero {
+  max-height: 640px;
   width: 100%;
+  overflow: hidden;
+  background-color: var(--silver);
 }
 
 .hero__container {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .hero__content {
-  background-color: #506c64;
+  background-color: var(--forest);
   padding: 4rem 6rem 6rem;
-}
-.hero__text {
-  max-width: 300px;
-  margin: auto;
 }
 
 .hero__title {
   font-size: 4.5rem;
   letter-spacing: 2px;
+  color: var(--tiffany);
+  width: 250px;
+  margin: auto;
 }
+
 .hero__title span {
-  color: #506c64;
+  color: var(--forest);
   text-shadow: -2px -2px 0 #77cbb9, 2px -2px 0 #77cbb9, -2px 2px 0 #77cbb9, 2px 2px 0 #77cbb9;
 }
 
 .hero__image {
-  background-color: #cdd3d5;
   height: 100%;
-  width: 60%;
+  object-fit: cover;
+  justify-self: right;
 }
+
+.hero__image img {
+  margin: auto;
+  height: 100%;
+}
+
 .hero__text p {
   font-size: 1.25rem;
-  color: #cdd3d5;
+  color: var(--silver);
   padding: 2rem 0;
+  margin: auto;
+  width: 250px;
 }
 
 /* About */
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min, 1fr));
   grid-template-rows: 3fr 1fr 3fr;
   margin: 2rem auto;
   width: 80%;
@@ -156,7 +163,7 @@ a {
 .card__stat {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #334a44;
+  color: var(--onyx);
   filter: drop-shadow(5px 5px #77cbb9b2);
 }
 
@@ -165,24 +172,24 @@ a {
 }
 
 .card__icon {
-  color: #334a44;
+  color: var(--onyx);
   width: 56px;
   height: 56px;
   stroke-width: 1px;
-  fill: #506c64;
+  fill: var(--forest);
   background: transparent;
   filter: drop-shadow(8px 5px #77cbb9b2);
 }
 
 .brand__icon {
-  color: #77cbb9;
+  color: var(--tiffany);
   width: 2.5rem;
   height: 2.5rem;
-  fill: #506c64;
+  fill: var(--forest);
 }
 
 .hero__icon {
-  color: #77cbb9;
+  color: var(--moonstone);
   width: 60px;
   height: 60px;
   stroke-width: 4px;
@@ -195,11 +202,11 @@ a {
 
 /* Sign Up */
 .signup {
-  background-color: #506c64;
+  background-color: var(--forest);
 }
 
 /* Footer */
 
 footer {
-  background-color: #506c64;
+  background-color: var(--forest);
 }
